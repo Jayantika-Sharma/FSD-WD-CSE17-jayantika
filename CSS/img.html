@@ -4,7 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Images</title>
+  <style>
+.overlay {
+position: absolute;
+bottom: 100%;
+left: 0;
+right: 0;
+background-color: #008CBA;
+overflow: hidden;
+width: 100%;
+height: 0;
+}
+transition: .5s ease;
+.container:hover .overlay { bottom: 0; height: 100%;
+}
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);}
+</style>
 </head>
 
 <body>
@@ -27,6 +52,21 @@
    <img src="./cat.jpg" height=250px style="border-radius:50%;filter:invert(10)">
    <h2>Filter=Invert(10)</h2>
    <hr>
+   <div class="container">
+     <img src="./cat.jpg" height=250px style="border-radius:50%;filter:invert(10);display:block">
+       <div class="overlay">
+         <div class="text">
+           HAPPY BIRTHDAY
+         </div>
+       </div>
+   </div>
+   <h2>Overlay</h2>
+   <hr>
+    <img src="./cat.jpg" height=250px style="border-radius:8px;transform:scaleX(-1)">
+   <h2>Flip</h2>
+   <hr>
+   
+  
 </body>
 
 </html>
