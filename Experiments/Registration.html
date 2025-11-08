@@ -36,9 +36,10 @@
                         <input id=pswrd type="password" name="password" placeholder="Enter Password"
                         minlength="6" title="Name should contain only alphabets and be at least 6 characters long." required><br><br>
                         Email:
-                        <input id=em type="email" name="email" placeholder="Enter Email" required><br><br>
+                        <input id=em type="email" name="email" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        required><br><br>
                         Phone-Number:
-                        <input id=phno type="tel" name="phone" placeholder="Enter Phone Number" required><br><br>
+                        <input id=phno type="tel" name="phone" placeholder="Enter Phone Number"  pattern="[0-9]{10}" title="Should contain only Number & 10 characters long." required><br><br>
                         Sex:
                         <input id=m type="radio" name="sex" value="male" required>Male
                         <input id=f type="radio" name="sex" value="female" required>Female<br><br>
