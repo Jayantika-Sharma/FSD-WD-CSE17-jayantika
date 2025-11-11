@@ -1,52 +1,90 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Registration Page</title>
-    <link rel="icon" type="image/x-icon"        href="https://www.fandom.com/f2/assets/favicons/favicon-16x16.png?v=c61f4d5587627115ba1c6d9e49e500f6d1a37db3">
+    <link rel="icon" type="image/x-icon"
+        href="https://www.fandom.com/f2/assets/favicons/favicon-16x16.png?v=c61f4d5587627115ba1c6d9e49e500f6d1a37db3">
 </head>
+
 <body>
     <script>
-       function val() {
-        true;
-       }
-    </script>
+    function val() {
+        var name = document.getElementById("name").value.trim();
+        var password = document.getElementById("pswrd").value.trim();
+        var email = document.getElementById("em").value.trim();
+        var phone = document.getElementById("phno").value.trim();
+        var namePattern = /^[A-Za-z]+$/;
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+        var phonePattern = /^[0-9]{10}$/;
+        if (name.length < 6 || !namePattern.test(name)) {
+            alert("Name should contain only alphabets and be at least 6 characters long.");
+            document.getElementById("name").focus();
+            return false;
+        }
+        if (password.length < 6) {
+            alert("Password should be at least 6 characters long.");
+            document.getElementById("pswrd").focus();
+            return false;
+        }
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid Email ID (e.g. name@domain.com).");
+            document.getElementById("em").focus();
+            return false;
+        }
+        if (!phonePattern.test(phone)) {
+            alert("Phone Number should contain exactly 10 digits.");
+            document.getElementById("phno").focus();
+            return false;
+        }
+        return true;
+    }
+</script>
     <table border="1" width="800" align="center">
-        <tr style="background-color:#B450C7;"><th><img src="https://png.pngtree.com/png-clipart/20190604/original/pngtree-creative-company-logo-png-image_1197025.jpg"
+        <tr style="background-color:#B450C7;">
+            <th><img src="https://png.pngtree.com/png-clipart/20190604/original/pngtree-creative-company-logo-png-image_1197025.jpg"
                     height="50"></th>
             <th colspan="4" style="color:white">XYZ College</th>
-        </tr> <tr style="background-color:#C7B350;">
+        </tr>
+        <tr style="background-color:#C7B350;">
             <th><a href="./Home.html">Home</a></th>
             <th><a href="./Login.html">Login</a></th>
             <th><a href="./Registration.html">Registration</a></th>
             <th><a href="./catalogue.html">Catalogue</a></th>
             <th><a href="./Cart.html">Cart</a></th>
-        </tr> <tr>
+        </tr>
+        <tr>
             <td>CSE</td>
             <td colspan="4" rowspan="4" style="text-align:center;">
                 <h2><u>Register</u></h2>
                 <form onsubmit=" return val()" action="Home.html" align="center">
                     <table>
                         Name:
-                        <input id=name type="text" name="name" placeholder="Enter Name"
-                        minlength="6" pattern="[A-Za-z]+" title="Name should contain only alphabets and be at least 6 characters long."
-                        required><br><br>
+                        <input id=name type="text" name="name" placeholder="Enter Name" minlength="6"
+                            pattern="[A-Za-z]+"
+                            title="Name should contain only alphabets and be at least 6 characters long."
+                            required><br><br>
                         Password:
-                        <input id=pswrd type="password" name="password" placeholder="Enter Password"
-                        minlength="6" title="Name should contain only alphabets and be at least 6 characters long." required><br><br>
+                        <input id=pswrd type="password" name="password" placeholder="Enter Password" minlength="6"
+                            title="Name should contain only alphabets and be at least 6 characters long."
+                            required><br><br>
                         Email:
-                        <input id=em type="email" name="email" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                        required><br><br>
+                        <input id=em type="email" name="email" placeholder="Enter Email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br><br>
                         Phone-Number:
-                        <input id=phno type="tel" name="phone" placeholder="Enter Phone Number"  pattern="[0-9]{10}" title="Should contain only Number & 10 characters long." required><br><br>
+                        <input id=phno type="tel" name="phone" placeholder="Enter Phone Number" pattern="[0-9]{10}"
+                            title="Should contain only Number & 10 characters long." required><br><br>
                         Sex:
                         <input id=m type="radio" name="sex" value="male" required>Male
                         <input id=f type="radio" name="sex" value="female" required>Female<br><br>
                         Date of Birth:
-                        <input id=date type="text" name="dob" style="width:30px" placeholder="Date" required><span>  </span>
-                        <input id=mnth type="text" name="dob" style="width:50px" placeholder="Month" required><span>  </span>
-                        <input id= yr type="text" name="dob" style="width:40px" placeholder="Year" required><br><br>
+                        <input id=date type="text" name="dob" style="width:30px" placeholder="Date" required><span>
+                        </span>
+                        <input id=mnth type="text" name="dob" style="width:50px" placeholder="Month" required><span>
+                        </span>
+                        <input id=yr type="text" name="dob" style="width:40px" placeholder="Year" required><br><br>
                         Language known:
                         <input id=eng type="checkbox" name="language" value="english">English
                         <input id=hin type="checkbox" name="language" value="hindi">Hindi
@@ -70,4 +108,5 @@
         </tr>
     </table>
 </body>
+
 </html>
