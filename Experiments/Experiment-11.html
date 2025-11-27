@@ -1,26 +1,67 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Experiment-11</title>
-  <style>
-    img{
-      height:250px;
-      border:10px double grey;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Experiment-11</title>
+    <style>
+        img {
+            height: 250px;
+            border: 10px double grey;
+        }
+        .round-button {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: none;
+            background-color: #04AA6D;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;        }
+
+        body {
+            background-color: rgba(119, 213, 251, 0.566);   }
+    </style>
 </head>
 
 <body align="center">
-  <img id="cat" src="./cat.jpg" height="250px" border>
-  <br>
-  <button onclick="document.getElementById('cat').src='./cat2.jpg'">Click</button>
-  <button onclick="document.getElementById('cat').src='./cat.jpg'">Click</button>
-  <h1 id="h1">HI!!</h1><br>
-  <button onclick="document.getElementById('h1').style.display='none'">Here:</button>
-  <button onclick="document.getElementById('h1').innerHTML=new Date">Time</button>
+    <script>
+        function sb1() {
+            document.getElementById("stbi").src = "./para1.png";
+            document.getElementById("stbp").innerHTML = "In the bustling town of Sweetville, there lived a cheerful chocolate-glazed donut named Donnie. Unlike the other pastries who were happy staying in the bakery window, Donnie dreamed of doing something more meaningful with his life. Every day, he watched people rush to work, carrying briefcases and wearing shiny shoes, and wondered what it would be like to have a job of his own.";
+        }
+        function sb2() {
+            document.getElementById("stbi").src = "./para2.png";
+            document.getElementById("stbp").innerHTML = "One sunny morning, Donnie rolled out of the display case and decided it was finally time to chase his dream. He visited the town’s newspaper office first. “I’d like to apply for a job!” he said proudly. But the editor frowned. “You’re a donut,” she said. “You can’t type!” Donnie sighed, realizing he might have to find a position that didn’t involve fingers.";
+        }
+        function sb3() {
+            document.getElementById("stbi").src = "./para3.png";
+            document.getElementById("stbp").innerHTML = "Next, Donnie tried the Sweetville Fire Station. He presented himself confidently, hoping his round shape might be useful somehow. The firefighters were amused but concerned. “You’d melt in a fire,” one of them said gently. Donnie rolled away again, feeling a little discouraged but still determined not to give up."
+        }
+        function sb4() {
+            document.getElementById("stbi").src = "./para4.png";
+            document.getElementById("stbp").innerHTML = "Finally, Donnie reached the Sweetville Hospital, where the head nurse noticed how many people smiled at him as he passed by. “You know,” she said thoughtfully, “we could use a little more joy around here.” She hired Donnie as the official Hospital Happiness Helper. His job was simple: cheer up patients, brighten hallways, and spread positivity."
+        }
+        function sb5() {
+            document.getElementById("stbi").src = "./para5.png";
+            document.getElementById("stbp").innerHTML = "From that day on, Donnie felt proud. He didn’t need fingers or firefighting skills—just his warm glaze and friendly spirit. Patients loved him, doctors welcomed him, and the whole hospital felt sweeter because of him. Donnie had finally found the perfect job, proving that even a donut can make a big difference."
+        }
+    </script>
+    <div>
+        <h1>Duncan:The Donut Wants a job</h1>
+        <div id="stb">
+            <button id="start-button" onclick="sb1()">Start</button><br><br>
+            <img id="stbi"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQCeu1ABLOpMfCMA3miNYFaJbwL9LqR4DPhA&s">
+            <p id="stbp"></p>
+            <div>
+                <button class="round-button" onclick="sb1()">1</button>
+                <button class="round-button" onclick="sb2()">2</button>
+                <button class="round-button" onclick="sb3()">3</button>
+                <button class="round-button" onclick="sb4()">4</button>
+                <button class="round-button" onclick="sb5()">5</button>
+            </div>
+        </div>
 </body>
-
 </html>
