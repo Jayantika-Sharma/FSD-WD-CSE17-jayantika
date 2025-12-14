@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exp:12 Calculator</title>
-    <link rel="icon" type="image/x-icon"
-        href="https://www.fandom.com/f2/assets/favicons/favicon-16x16.png?v=c61f4d5587627115ba1c6d9e49e500f6d1a37db3">
+     <link rel="icon" type="image/x-icon"
+    href="https://www.fandom.com/f2/assets/favicons/favicon-16x16.png?v=c61f4d5587627115ba1c6d9e49e500f6d1a37db3">
 
 
     <style>
         body {
             background: antiquewhite;
-            display: flex;
+            display: block;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
-
         .calculator {
             width: 320px;
             padding: 20px;
@@ -76,7 +74,8 @@
 </head>
 
 <body>
-
+   <h1>Date:</h1>
+   <p id="date">Today</p>
     <div class="calculator">
         <input type="text" id="display" disabled>
 
@@ -128,7 +127,8 @@
                 display.value = "Error";
             }
         }
+        const today = new Date();
+  document.getElementById("date").innerText = today;
     </script>
 </body>
-
 </html>
